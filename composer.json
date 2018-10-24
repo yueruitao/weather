@@ -1,0 +1,28 @@
+{
+    "name": "yueruitao/weather",
+    "description": "A weather SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yueruitao",
+            "email": "1316751406@qq.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "phpunit/phpunit": "^7.4",
+        "mockery/mockery": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {   
+            "Yueruitao\\Weather\\": "./src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yueruitao\\Weather\\ServiceProvider"
+            ]
+        }
+    }
+}
