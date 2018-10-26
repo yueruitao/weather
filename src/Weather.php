@@ -1,4 +1,9 @@
 <?php
+
+/*
+ * This file is part of the yueruitao/weather.
+ */
+
 namespace Yueruitao\Weather;
 
 use GuzzleHttp\Client;
@@ -8,6 +13,7 @@ use Yueruitao\Weather\Exceptions\InvalidArgumentException;
 class Weather
 {
     protected $key;
+
     protected $guzzleOptions = [];
 
     public function __construct($key)
@@ -37,7 +43,6 @@ class Weather
 
     public function getWeather($city, $type = 'base', $format = 'json')
     {
-
         $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
 
         if (!\in_array(\strtolower($format), ['xml', 'json'])) {
@@ -52,7 +57,7 @@ class Weather
             'key' => $this->key,
             'city' => $city,
             'output' => \strtolower($format),
-            'extensions' =>  \strtolower($type),
+            'extensions' => \strtolower($type),
         ]);
 
         try {
