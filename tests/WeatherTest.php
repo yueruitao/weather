@@ -1,4 +1,9 @@
 <?php
+
+/*
+ * This file is part of the yueruitao/weather.
+ */
+
 namespace Yueruitao\Weather\Tests;
 
 use GuzzleHttp\Client;
@@ -9,7 +14,6 @@ use Yueruitao\Weather\Exceptions\HttpException;
 use Yueruitao\Weather\Exceptions\InvalidArgumentException;
 use Yueruitao\Weather\Weather;
 use PHPUnit\Framework\TestCase;
-
 
 class WeatherTest extends TestCase
 {
